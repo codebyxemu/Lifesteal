@@ -1,0 +1,5 @@
+name: "LifestealCore"
+authors: ["Xemu", "Maximus_yt"]
+description: LifestealCore for servers running latest version
+main: codes.xemu.lifestealcore.Lifesteal
+version: 1.0.0
