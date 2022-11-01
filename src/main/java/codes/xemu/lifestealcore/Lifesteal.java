@@ -23,7 +23,7 @@ public class Lifesteal extends JavaPlugin {
 	public void onEnable() {
 		instance = this;
 
-		INVALID_USAGE_MESSAGE = new PlayerMessage("").configurable("Messages.Invalid_USAGE").setPrefix().colorize();
+		INVALID_USAGE_MESSAGE = new PlayerMessage("Messages.Invalid_USAGE").configurable().setPrefix().colorize();
 
 		new LifestealCommand();
 		new HeartsCommand();

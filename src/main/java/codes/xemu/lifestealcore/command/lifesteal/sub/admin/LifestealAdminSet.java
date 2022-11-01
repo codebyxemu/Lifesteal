@@ -21,16 +21,16 @@ public class LifestealAdminSet implements SubCommand {
 		Profile profile = new Profile(user.getUniqueId());
 		profile.setHearts(amount);
 
-		new PlayerMessage("")
-				.configurable("Messages.Hearts_Set_By_Admin")
+		new PlayerMessage("Messages.Hearts_Set_By_Admin")
+				.configurable()
 				.setPrefix()
 				.setPlaceholder("<player>", user.getName())
 				.setPlaceholder("<hearts>", profile.getHeartsAsString())
 				.colorize()
 				.send(user);
 
-		new PlayerMessage("")
-				.configurable("Messages.Hearts_Set_For_Admin")
+		new PlayerMessage("Messages.Hearts_Set_For_Admin")
+				.configurable()
 				.setPrefix()
 				.setPlaceholder("<hearts>", profile.getHeartsAsString())
 				.colorize()

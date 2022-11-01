@@ -26,14 +26,14 @@ public class LifestealAdminRevive implements SubCommand {
 
 		profile.setHearts(Lifesteal.get().getConfig().getInt("Settings.StartingHearts"));
 
-		new PlayerMessage("")
-				.configurable("Messages.Revived_By_Admin")
+		new PlayerMessage("Messages.Revived_By_Admin")
+				.configurable()
 				.setPrefix()
 				.colorize()
 				.send(user);
 
-		new PlayerMessage("")
-				.configurable("Messages.Revived_For_Admin")
+		new PlayerMessage("Messages.Revived_For_Admin")
+				.configurable()
 				.setPrefix()
 				.setPlaceholder("<player>", user.getName())
 				.colorize()
