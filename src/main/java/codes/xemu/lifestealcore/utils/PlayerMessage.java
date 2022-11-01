@@ -35,8 +35,8 @@ public class PlayerMessage {
 		return this;
 	}
 
-	public PlayerMessage configurable(String path) {
-		this.message = Lifesteal.get().getConfig().getString(path);
+	public PlayerMessage configurable() {
+		this.message = Lifesteal.get().getConfig().getString(getMessage());
 		return this;
 	}
 

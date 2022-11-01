@@ -1,3 +1,26 @@
 Settings:
   StartingHearts: 20
-  Prefix: "&c[LifestealCore]"
+  Prefix: "&8[&5&lLifesteal&d&lPro&8]"
+
+Ban:
+  Enabled: true
+  Ban-Command: "" # Commands are without /
+  Unban-Command: "" # Commands are without /
+
+Messages:
+  No_Permission: "&cYou do not have the right permissions in order to execute this command."
+  Invalid_Usage: "&cSorry! Invalid Command Usage. Execute /lifesteal for help."
+  View_Hearts_Message: "<prefix> &7You currently have &c♡<hearts> &7hearts."
+  Other_Hearts_Message: "<prefix> &e<player> &7currently has &c♡<hearts> &7hearts."
+  Lifesteal_Help:
+    - "&8&m-----------&r &5&lLifesteal&d&lPro &8&m-----------"
+    - "&7Lifesteal Pro is currently running on version &a<version>&7."
+    - "&7/lifesteal &8• &fLifesteal Main Command"
+    - "&7/lifesteal admin &8• &fLifesteal Admin Command"
+    - "&7/hearts &8• &fOpens the Hearts GUI"
+    - "&8&m-----------&r &5&lLifesteal&d&lPro &8&m-----------"
+  Hearts_Set_By_Admin: "<prefix> &cAn administrator set your hearts to: &f<hearts>"
+  Hearts_Set_As_Admin: "<prefix> &cYou set <player>'s hearts to: &f<hearts>"
+  HeartsGUI:
+    HeartsItem:
+      DisplayName: "&c♡<hearts> hearts"

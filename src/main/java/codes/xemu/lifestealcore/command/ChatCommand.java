@@ -2,7 +2,6 @@ package codes.xemu.lifestealcore.command;
 
 import codes.xemu.lifestealcore.Lifesteal;
 import codes.xemu.lifestealcore.utils.PlayerMessage;
-import me.clip.placeholderapi.libs.kyori.adventure.platform.facet.Facet;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandMap;
 import org.bukkit.command.CommandSender;
@@ -12,9 +11,9 @@ import java.lang.reflect.Field;
 import java.util.Arrays;
 import java.util.List;
 
-public abstract class LifestealCommand extends BukkitCommand {
+public abstract class ChatCommand extends BukkitCommand {
 
-	public LifestealCommand(String name, String description, String[] aliases) {
+	public ChatCommand(String name, String description, String[] aliases) {
 		super(name);
 
 		PlayerMessage permissionMessage = new PlayerMessage(ChatColor.RED + "I'm sorry, but you do not have permission to perform this command.");
