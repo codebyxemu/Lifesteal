@@ -6,6 +6,7 @@ import codes.xemu.lifestealcore.utils.ConfigValues;
 import codes.xemu.lifestealcore.utils.MessageBuilder;
 import codes.xemu.lifestealcore.utils.Utils;
 import org.bukkit.Bukkit;
+import org.bukkit.OfflinePlayer;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -66,6 +67,14 @@ public class AdminCommand implements CommandExecutor {
 					return true;
 				}
 
+				if (hearts > ConfigValues.HEARTS_MAX.getInt()) {
+					new MessageBuilder(ConfigValues.MESSAGES_ADMIN_ERROR_LIMIT_REACHED.getString())
+							.setPrefix()
+							.colorize()
+							.send(player);
+					return true;
+				}
+
 				LifestealProfile profile = LifestealPlugin.get().getStorage().getProfile(target.getUniqueId());
 				profile.setHearts(hearts);
 
@@ -94,9 +103,9 @@ public class AdminCommand implements CommandExecutor {
 					return true;
 				}
 
-				Player target;
-				if (Bukkit.getPlayer(args[1]) != null) {
-					target = Bukkit.getPlayer(args[1]);
+				OfflinePlayer target;
+				if (Bukkit.getOfflinePlayer(args[1]) != null) {
+					target = Bukkit.getOfflinePlayer(args[1]);
 				} else {
 					new MessageBuilder(ConfigValues.MESSAGES_INVALID_TARGET.getString())
 							.setPrefix()

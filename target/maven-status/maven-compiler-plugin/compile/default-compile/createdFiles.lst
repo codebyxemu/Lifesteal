@@ -1,3 +1,4 @@
+codes\xemu\lifestealcore\developer\LifestealAPI.class
 codes\xemu\lifestealcore\utils\Utils.class
 codes\xemu\lifestealcore\storage\FlatFileStorage.class
 codes\xemu\lifestealcore\utils\MessageBuilder.class
@@ -6,8 +7,10 @@ codes\xemu\lifestealcore\command\HeartsCommand.class
 codes\xemu\lifestealcore\handler\HeartsHandler.class
 codes\xemu\lifestealcore\listener\PlayerListeners.class
 codes\xemu\lifestealcore\storage\LifestealProfile.class
+codes\xemu\lifestealcore\listener\InventoryListeners.class
 codes\xemu\lifestealcore\LifestealPlugin.class
 codes\xemu\lifestealcore\command\AdminCommand.class
 codes\xemu\lifestealcore\utils\ConfigValues.class
 codes\xemu\lifestealcore\storage\Storage.class
+codes\xemu\lifestealcore\listener\DeathListeners.class
 codes\xemu\lifestealcore\utils\ItemBuilder.class

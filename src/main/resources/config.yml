@@ -34,6 +34,8 @@ Messages:
   InvalidTarget: "&cIm sorry, but this user is invalid."
   InvalidUsage: "&cIm sorry, but this usage is invalid. View /help"
   InvalidProfile: "&cIm sorry, but this user does not have a data-profile yet. (they haven't joined)"
+  HeartStolenFrom: "<prefix> &c<player> stole a heart from you. You now have a total of <hearts> hearts."
+  HeartStolenTo: "<prefix> &aYou stole a heart from <player>. You now have a total of <hearts> hearts."
 
 Messages-Admin:
   HelpPage:
@@ -46,6 +48,7 @@ Messages-Admin:
   FromSet: "<prefix> &7You set &e<player>'s &7hearts to: &a<hearts>" # Sender
   ToSet: "<prefix> &7Your hearts were set to: &a<hearts>" # Receiver
   Revive: "<prefix> &7You revived player and gave 5 hearts: &e<player>"
+  HeartsLimit: "<prefix> &cThis player has reached it's Hearts Limit."
 
 GUI:
   Hearts_Self:

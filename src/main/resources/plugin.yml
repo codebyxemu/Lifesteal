@@ -2,7 +2,7 @@ name: "LifestealPro"
 authors: ["Xemu", "Maximus_yt"]
 description: LifestealCore for servers running latest version
 main: codes.xemu.lifestealcore.LifestealPlugin
-version: '${project.version}'
+version: 0.0.0-beta-v3
 api-version: 1.19
 
 commands:
@@ -10,7 +10,9 @@ commands:
     aliases: [heart]
     description: View your hears or others hearts
     usage: /hearts <Player-Name>
+    permission: lifesteal.hearts
   admin:
     aliases: [admins]
     description: Admins Command
     usage: /admin
+    permission: lifesteal.admin

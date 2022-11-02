@@ -1,9 +1,12 @@
 D:\SpigotPlugins\Lifesteal\src\main\java\codes\xemu\lifestealcore\storage\FlatFileStorage.java
+D:\SpigotPlugins\Lifesteal\src\main\java\codes\xemu\lifestealcore\developer\LifestealAPI.java
 D:\SpigotPlugins\Lifesteal\src\main\java\codes\xemu\lifestealcore\utils\Utils.java
 D:\SpigotPlugins\Lifesteal\src\main\java\codes\xemu\lifestealcore\command\HeartsCommand.java
 D:\SpigotPlugins\Lifesteal\src\main\java\codes\xemu\lifestealcore\listener\PlayerListeners.java
+D:\SpigotPlugins\Lifesteal\src\main\java\codes\xemu\lifestealcore\listener\DeathListeners.java
 D:\SpigotPlugins\Lifesteal\src\main\java\codes\xemu\lifestealcore\handler\HeartsHandler.java
 D:\SpigotPlugins\Lifesteal\src\main\java\codes\xemu\lifestealcore\utils\ItemBuilder.java
+D:\SpigotPlugins\Lifesteal\src\main\java\codes\xemu\lifestealcore\listener\InventoryListeners.java
 D:\SpigotPlugins\Lifesteal\src\main\java\codes\xemu\lifestealcore\storage\LifestealProfile.java
 D:\SpigotPlugins\Lifesteal\src\main\java\codes\xemu\lifestealcore\utils\ConfigValues.java
 D:\SpigotPlugins\Lifesteal\src\main\java\codes\xemu\lifestealcore\LifestealPlugin.java

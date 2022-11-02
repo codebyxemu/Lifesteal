@@ -38,12 +38,14 @@ public enum ConfigValues {
 	MESSAGES_INVALID_TARGET("Messages.InvalidTarget"),
 	MESSAGES_INVALID_USAGE("Messages.InvalidUsage"),
 	MESSAGES_INVALID_PROFILE("Messages.InvalidProfile"),
+	MESSAGES_HEART_STOLEN_FROM("Messages.HeartStolenFrom"),
+	MESSAGES_HEART_STOLEN_TO("Messages.HeartStolenTo"),
 
 	MESSAGES_ADMIN_HELP("Messages-Admin.HelpPage"),
 	MESSAGES_ADMIN_FROM_SET("Messages-Admin.FromSet"),
 	MESSAGES_ADMIN_TO_SET("Messages-Admin.ToSet"),
 	MESSAGES_ADMIN_REVIVE("Messages-Admin.Revive"),
-	;
+	MESSAGES_ADMIN_ERROR_LIMIT_REACHED("Messages-Admin.HeartsLimit");
 
 	String path;
 

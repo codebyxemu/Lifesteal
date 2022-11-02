@@ -5,6 +5,7 @@ import codes.xemu.lifestealcore.handler.HeartsHandler;
 import codes.xemu.lifestealcore.storage.LifestealProfile;
 import codes.xemu.lifestealcore.storage.Storage;
 import codes.xemu.lifestealcore.utils.ConfigValues;
+import codes.xemu.lifestealcore.utils.MessageBuilder;
 import codes.xemu.lifestealcore.utils.Utils;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -36,25 +37,31 @@ public class PlayerListeners implements Listener {
 
 	@EventHandler
 	public void onPlayerDeath(PlayerDeathEvent event) {
+
 		Player player = event.getEntity();
+		LifestealProfile profile = storage.getProfile(player.getUniqueId());
 
-		boolean hasKiller = player.getKiller() != null;
-		Player killer;
-		if (hasKiller) {
-			killer = player.getKiller();
-		}
-
-		if (ConfigValues.WORLD_SETTINGS_DISABLED_WORLDS.getStringList().contains(player.getWorld().getName())) {
-			// do nothing
-			return;
-		}
-
-		if (ConfigValues.WORLD_SETTINGS_INSTANT_ELIMINATION_WORLDS.getStringList().contains(player.getWorld().getName())) {
+		if (profile.getHearts() == 1) {
 			Utils.ban(player);
 		}
 
+		if (player.getKiller() != null) {
+			handler.setHearts(profile, profile.getHearts() - 1);
+		}
 
+		new MessageBuilder(ConfigValues.MESSAGES_HEART_STOLEN_FROM.getString())
+				.setPrefix()
+				.setPlaceholder("<player>", player.getKiller().getName())
+				.setPlaceholder("<hearts>", String.valueOf(profile.getHearts()))
+				.colorize()
+				.send(player);
 
+		new MessageBuilder(ConfigValues.MESSAGES_HEART_STOLEN_TO.getString())
+				.setPrefix()
+				.setPlaceholder("<player>", player.getName())
+				.setPlaceholder("<hearts>", String.valueOf(profile.getHearts()))
+				.colorize()
+				.send(player.getKiller());
 
 	}
 

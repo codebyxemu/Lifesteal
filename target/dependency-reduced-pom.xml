@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>xemu.codes</groupId>
   <artifactId>Lifesteal</artifactId>
-  <version>0.0.0-beta-v2</version>
+  <version>0.0.0-beta-v3</version>
   <build>
     <plugins>
       <plugin>

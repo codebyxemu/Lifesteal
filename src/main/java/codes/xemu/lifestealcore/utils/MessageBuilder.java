@@ -6,6 +6,7 @@ import lombok.Getter;
 import me.clip.placeholderapi.PlaceholderAPI;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.entity.Player;
 
 @Getter
@@ -41,10 +42,11 @@ public class MessageBuilder {
 	}
 
 	public void console(boolean prefix) {
+		ConsoleCommandSender s = Bukkit.getConsoleSender();
 		if (prefix) {
-			Bukkit.getLogger().info("[LifestealCore] " + getMessage());
+			s.sendMessage("§7[§cLifesteal§4Pro§7] §r" + getMessage());
 		}
-		Bukkit.getLogger().info(getMessage());
+		s.sendMessage(getMessage());
 	}
 
 	public void send(Player player) {
