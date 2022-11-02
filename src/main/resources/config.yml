@@ -26,7 +26,7 @@ Hearts:
 
 Bans:
   Enabled: true
-  BanCommand: "ban <user> <reason>"
+  BanCommand: "ban <user> Lifesteal Ban"
   UnbanCommand: "pardon <user>"
 
 Messages:

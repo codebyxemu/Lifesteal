@@ -4,6 +4,7 @@ import codes.xemu.lifestealcore.LifestealPlugin;
 import codes.xemu.lifestealcore.storage.LifestealProfile;
 import codes.xemu.lifestealcore.utils.ConfigValues;
 import codes.xemu.lifestealcore.utils.MessageBuilder;
+import codes.xemu.lifestealcore.utils.Utils;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -117,6 +118,8 @@ public class AdminCommand implements CommandExecutor {
 						.setPlaceholder("<player>", target.getName())
 						.colorize()
 						.send(player);
+
+				Utils.unban(player);
 
 				return true;
 			}

@@ -6,6 +6,7 @@ import codes.xemu.lifestealcore.storage.LifestealProfile;
 import codes.xemu.lifestealcore.storage.Storage;
 import codes.xemu.lifestealcore.utils.ConfigValues;
 import codes.xemu.lifestealcore.utils.Utils;
+import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -43,15 +44,18 @@ public class PlayerListeners implements Listener {
 			killer = player.getKiller();
 		}
 
+		if (ConfigValues.WORLD_SETTINGS_DISABLED_WORLDS.getStringList().contains(player.getWorld().getName())) {
+			// do nothing
+			return;
+		}
+
 		if (ConfigValues.WORLD_SETTINGS_INSTANT_ELIMINATION_WORLDS.getStringList().contains(player.getWorld().getName())) {
 			Utils.ban(player);
 		}
 
-		if (ConfigValues.WORLD_SETTINGS_DISABLED_WORLDS.getStringList().contains(player.getWorld().getName())) {
-			// do nothing
-		}
 
-		
+
+
 	}
 
 }
