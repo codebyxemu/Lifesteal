@@ -22,7 +22,7 @@ public class HeartsGUI implements Listener {
 
 		ItemBuilder heartsItem = new ItemBuilder(Material.SPYGLASS, 1)
 				.setName(
-						new PlayerMessage("").configurable("Messages.HeartsGUI.HeartsItem.Display")
+						new PlayerMessage("Messages.HeartsGUI.HeartsItem.DisplayName").configurable()
 								.setPlaceholder("<hearts>", heartsString)
 								.colorize()
 								.getMessage()

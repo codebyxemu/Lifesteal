@@ -5,6 +5,7 @@ import codes.xemu.lifestealcore.command.ChatCommand;
 import codes.xemu.lifestealcore.command.lifesteal.sub.LifestealHelp;
 import codes.xemu.lifestealcore.command.lifesteal.sub.admin.LifestealAdminRevive;
 import codes.xemu.lifestealcore.command.lifesteal.sub.admin.LifestealAdminSet;
+import codes.xemu.lifestealcore.utils.PlayerMessage;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
@@ -37,6 +38,8 @@ public class LifestealCommand extends ChatCommand {
 					} else {
 						Lifesteal.INVALID_USAGE_MESSAGE.send(player);
 					}
+				} else {
+					Lifesteal.INVALID_USAGE_MESSAGE.send(player);
 				}
 			}
 		}

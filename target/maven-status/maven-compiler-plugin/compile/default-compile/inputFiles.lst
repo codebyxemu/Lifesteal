@@ -1,6 +1,7 @@
 D:\SpigotPlugins\Lifesteal\src\main\java\codes\xemu\lifestealcore\command\ChatCommand.java
 D:\SpigotPlugins\Lifesteal\src\main\java\codes\xemu\lifestealcore\command\lifesteal\sub\admin\LifestealAdminSet.java
 D:\SpigotPlugins\Lifesteal\src\main\java\codes\xemu\lifestealcore\listener\DeathEvent.java
+D:\SpigotPlugins\Lifesteal\src\main\java\codes\xemu\lifestealcore\utils\ConfigurableMessage.java
 D:\SpigotPlugins\Lifesteal\src\main\java\codes\xemu\lifestealcore\listener\PlayerJoin.java
 D:\SpigotPlugins\Lifesteal\src\main\java\codes\xemu\lifestealcore\utils\Utils.java
 D:\SpigotPlugins\Lifesteal\src\main\java\codes\xemu\lifestealcore\Lifesteal.java

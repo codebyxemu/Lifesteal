@@ -12,6 +12,7 @@ codes\xemu\lifestealcore\utils\PlayerMessage.class
 codes\xemu\lifestealcore\listener\PlayerJoin.class
 codes\xemu\lifestealcore\command\lifesteal\sub\admin\LifestealAdminRevive.class
 codes\xemu\lifestealcore\command\ChatCommand.class
+codes\xemu\lifestealcore\utils\ConfigurableMessage.class
 codes\xemu\lifestealcore\utils\ItemBuilder.class
 codes\xemu\lifestealcore\command\lifesteal\LifestealCommand.class
 codes\xemu\lifestealcore\command\lifesteal\sub\admin\LifestealAdminSet.class

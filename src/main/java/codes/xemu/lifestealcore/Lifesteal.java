@@ -23,7 +23,10 @@ public class Lifesteal extends JavaPlugin {
 	public void onEnable() {
 		instance = this;
 
-		INVALID_USAGE_MESSAGE = new PlayerMessage("Messages.Invalid_USAGE").configurable().setPrefix().colorize();
+		getConfig().options().copyDefaults(true);
+		saveConfig();
+
+		INVALID_USAGE_MESSAGE = new PlayerMessage("Messages.Invalid_Usage").configurable().setPrefix().colorize();
 
 		new LifestealCommand();
 		new HeartsCommand();
@@ -33,8 +36,6 @@ public class Lifesteal extends JavaPlugin {
 		Bukkit.getPluginManager().registerEvents(new PlayerLeave(), this);
 		Bukkit.getPluginManager().registerEvents(new HeartsGUI(), this);
 
-		getConfig().options().copyDefaults(true);
-		saveConfig();
 
 		getLogger().info("Successfully started LifestealPRO.");
 	}
