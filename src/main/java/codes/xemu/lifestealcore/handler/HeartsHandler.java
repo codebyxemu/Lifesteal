@@ -1,18 +1,12 @@
 package codes.xemu.lifestealcore.handler;
 
-import codes.xemu.lifestealcore.Lifesteal;
-import codes.xemu.lifestealcore.profile.Profile;
-import org.bukkit.entity.Player;
-
-import java.util.UUID;
+import codes.xemu.lifestealcore.LifestealPlugin;
+import codes.xemu.lifestealcore.storage.LifestealProfile;
 
 public class HeartsHandler {
 
-	protected Lifesteal plugin = Lifesteal.get();
-
-	public static void stealHeart(Profile player, Profile victim) {
-		player.increaseHeartsByOne();
-		victim.decreaseHeartsByOne();
+	public void setHearts(LifestealProfile profile, int hearts) {
+		LifestealPlugin.get().getStorage().saveData(new LifestealProfile(profile.getUuid(), hearts));
 	}
 
 }

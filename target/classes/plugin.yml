@@ -1,5 +1,16 @@
-name: "LifestealCore"
+name: "LifestealPro"
 authors: ["Xemu", "Maximus_yt"]
 description: LifestealCore for servers running latest version
-main: codes.xemu.lifestealcore.Lifesteal
-version: 1.0.0
+main: codes.xemu.lifestealcore.LifestealPlugin
+version: '${project.version}'
+api-version: 1.19
+
+commands:
+  hearts:
+    aliases: [heart]
+    description: View your hears or others hearts
+    usage: /hearts <Player-Name>
+  admin:
+    aliases: [admins]
+    description: Admins Command
+    usage: /admin

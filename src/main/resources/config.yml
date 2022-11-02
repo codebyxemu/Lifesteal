@@ -1,26 +1,55 @@
-Settings:
-  StartingHearts: 20
-  Prefix: "&8[&5&lLifesteal&d&lPro&8]"
+# LifestealPro
 
-Ban:
+Settings:
+  General:
+    Prefix: "&8[&cLifesteal&4Pro&8]"
+  Storage:
+    # Available Types: flat
+    StorageType: "flat"
+
+Hearts:
+
+  # What everyone starts with
+  Starter: 10
+  # What you get after being unbanned
+  Unban: 5
+  # The max amount you can accumulate
+  Max: 100
+
+  HeartLoss:
+    # If enabled you lose heart of Death by Mob Entity
+    mobsEnabled: true
+
+  WorldSettings:
+    Disabled-Worlds: ["world_the_end"]
+    InstantEliminationWorlds: ["world_nether"]
+
+Bans:
   Enabled: true
-  Ban-Command: "" # Commands are without /
-  Unban-Command: "" # Commands are without /
+  BanCommand: "ban <user> <reason>"
+  UnbanCommand: "pardon <user>"
 
 Messages:
-  No_Permission: "&cYou do not have the right permissions in order to execute this command."
-  Invalid_Usage: "&cSorry! Invalid Command Usage. Execute /lifesteal for help."
-  View_Hearts_Message: "<prefix> &7You currently have &c♡<hearts> &7hearts."
-  Other_Hearts_Message: "<prefix> &e<player> &7currently has &c♡<hearts> &7hearts."
-  Lifesteal_Help:
-    - "&8&m-----------&r &5&lLifesteal&d&lPro &8&m-----------"
-    - "&7Lifesteal Pro is currently running on version &a<version>&7."
-    - "&7/lifesteal &8• &fLifesteal Main Command"
-    - "&7/lifesteal admin &8• &fLifesteal Admin Command"
-    - "&7/hearts &8• &fOpens the Hearts GUI"
-    - "&8&m-----------&r &5&lLifesteal&d&lPro &8&m-----------"
-  Hearts_Set_By_Admin: "<prefix> &cAn administrator set your hearts to: &f<hearts>"
-  Hearts_Set_As_Admin: "<prefix> &cYou set <player>'s hearts to: &f<hearts>"
-  HeartsGUI:
-    HeartsItem:
-      DisplayName: "&c♡<hearts> hearts"
+  NoPermission: "&cNo permission."
+  InvalidTarget: "&cIm sorry, but this user is invalid."
+  InvalidUsage: "&cIm sorry, but this usage is invalid. View /help"
+  InvalidProfile: "&cIm sorry, but this user does not have a data-profile yet. (they haven't joined)"
+
+Messages-Admin:
+  HelpPage:
+    - "&8&m-------------------------------------------"
+    - "&cLifestealPro by Xemu Development"
+    - "&c/admin - Shows this page"
+    - "&c/admin set <player> <hearts> - Sets hearts"
+    - "&c/admin revive <player> - Revives a player & unbans"
+    - "&8&m-------------------------------------------"
+  FromSet: "<prefix> &7You set &e<player>'s &7hearts to: &a<hearts>" # Sender
+  ToSet: "<prefix> &7Your hearts were set to: &a<hearts>" # Receiver
+  Revive: "<prefix> &7You revived player and gave 5 hearts: &e<player>"
+
+GUI:
+  Hearts_Self:
+    Title: "Hearts Overview - <target>"
+    Item-DisplayName: "&cHearts: &f<hearts>"
+    Item-Lore:
+      - "You can steal hearts from others by murdering them."
